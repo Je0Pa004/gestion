@@ -1,0 +1,45 @@
+.sidenav-container {
+  height: 100vh;
+}
+.sidenav {
+  width: 220px;
+  background: #263238;
+  color: #fff;
+}
+mat-toolbar {
+  background: #1976d2;
+  color: #fff;
+}
+mat-list-item, a.mat-list-item {
+  color: #fff;
+  font-weight: 500;
+}
+a.mat-list-item.active {
+  background: #1565c0;
+}
+.dropdown-menu.show-on-hover {
+  display: none;
+  position: static; /* Correction : plus de position absolue */
+  width: 100%; /* Prend toute la largeur du parent */
+  margin-top: 0.5rem;
+  background: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px rgba(123,47,242,0.07);
+  z-index: 200;
+}
+.nav-item.dropdown:hover .dropdown-menu.show-on-hover {
+  display: block;
+}
+.dropdown-item {
+  color: #7b2ff2;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  text-align: left;
+}
+.dropdown-item.active, .dropdown-item:hover {
+  background: #7b2ff2;
+  color: #fff !important;
+}

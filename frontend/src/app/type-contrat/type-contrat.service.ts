@@ -1,0 +1,1 @@
+// Type-contrat service placeholder

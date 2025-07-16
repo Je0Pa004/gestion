@@ -1,0 +1,1 @@
+// Type-rubrique service placeholder

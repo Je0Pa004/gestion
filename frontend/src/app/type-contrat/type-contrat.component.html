@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="entity-form-card p-4">
+    <div class="entity-form-header mb-4">
+      <h3 class="mb-0 text-uppercase">Ajouter un Type de Contrat</h3>
+    </div>
+    <form [formGroup]="typeContratForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="libelle" class="form-label">Libellé</label>
+        <input id="libelle" formControlName="libelle" class="form-control" placeholder="Saisir le libellé" />
+      </div>
+      <div class="mb-3">
+        <label for="dateDebut" class="form-label">Date de début</label>
+        <input id="dateDebut" type="date" formControlName="dateDebut" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="dateFin" class="form-label">Date de fin</label>
+        <input id="dateFin" type="date" formControlName="dateFin" class="form-control" />
+      </div>
+      <div class="d-flex gap-2 mt-3">
+        <button type="submit" class="btn btn-success flex-fill">Enregistrer</button>
+        <button type="button" class="btn btn-secondary flex-fill" (click)="onCancel()">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>

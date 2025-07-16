@@ -1,0 +1,38 @@
+<div class="container-fluid py-4">
+  <h2 class="mb-4 text-center">Dashboard - Gestion des entités</h2>
+  <div class="row g-4">
+    <!-- Exemple pour chaque entité, à dupliquer/adapter -->
+    <div class="col-12 mb-4" *ngFor="let entity of entities">
+      <div class="card dashboard-card shadow-sm h-100">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="fw-bold">{{ entity.label }}</span>
+          <button class="btn btn-sm btn-primary" (click)="onAdd(entity.key)">Ajouter</button>
+        </div>
+        <div class="card-body p-2">
+          <div class="table-responsive">
+            <table class="table table-sm align-middle mb-0">
+              <thead>
+                <tr>
+                  <th *ngFor="let col of entity.columns">{{ col.header }}</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngIf="!entity.data || entity.data.length === 0">
+                  <td [attr.colspan]="entity.columns.length + 1" class="text-muted text-center py-3">Aucun élément enregistré.</td>
+                </tr>
+                <tr *ngFor="let item of entity.data">
+                  <td *ngFor="let col of entity.columns">{{ item[col.field] }}</td>
+                  <td>
+                    <button class="btn btn-outline-secondary btn-sm me-1" (click)="onEdit(entity.key, item)">Modifier</button>
+                    <button class="btn btn-outline-danger btn-sm" (click)="onDelete(entity.key, item)">Supprimer</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

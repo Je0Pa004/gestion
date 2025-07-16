@@ -1,0 +1,65 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="registration-card p-4">
+    <div class="registration-header mb-4">
+      <h3 class="mb-0 text-uppercase">Ajouter un Employé</h3>
+    </div>
+    <form [formGroup]="employeForm" (ngSubmit)="onSubmit()">
+      <div class="row g-3">
+        <div class="col-12 d-flex gap-3">
+          <div class="flex-fill">
+            <label for="nom" class="form-label">Nom</label>
+            <input id="nom" formControlName="nom" class="form-control" placeholder="Nom" />
+          </div>
+          <div class="flex-fill">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input id="prenom" formControlName="prenom" class="form-control" placeholder="Prénom" />
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="nif" class="form-label">NIF</label>
+          <input id="nif" formControlName="nif" class="form-control" />
+        </div>
+        <div class="col-12">
+          <label for="cnss" class="form-label">CNSS</label>
+          <input id="cnss" formControlName="cnss" class="form-control" />
+        </div>
+        <div class="col-12">
+          <label for="adresse" class="form-label">Adresse</label>
+          <input id="adresse" formControlName="adresse" class="form-control" />
+        </div>
+        <div class="col-12">
+          <label for="salaireBase" class="form-label">Salaire de base</label>
+          <input id="salaireBase" type="number" formControlName="salaireBase" class="form-control" />
+        </div>
+        <div class="col-12">
+          <label for="matricule" class="form-label">Matricule</label>
+          <input id="matricule" formControlName="matricule" class="form-control" />
+        </div>
+        <div class="col-12 d-flex gap-3">
+          <div class="flex-fill">
+            <label for="dateNaissance" class="form-label">Date de naissance</label>
+            <input id="dateNaissance" type="date" formControlName="dateNaissance" class="form-control" />
+          </div>
+          <div class="flex-fill">
+            <label for="dateRecrutement" class="form-label">Date de recrutement</label>
+            <input id="dateRecrutement" type="date" formControlName="dateRecrutement" class="form-control" />
+          </div>
+        </div>
+        <div class="col-12 d-flex gap-3">
+          <div class="flex-fill">
+            <label for="telephone" class="form-label">Téléphone</label>
+            <input id="telephone" formControlName="telephone" class="form-control" />
+          </div>
+          <div class="flex-fill">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" type="email" formControlName="email" class="form-control" />
+          </div>
+        </div>
+        <div class="col-12 mt-3 d-flex gap-2">
+          <button type="submit" class="btn btn-danger flex-fill">Enregistrer</button>
+          <button type="button" class="btn btn-secondary flex-fill" (click)="onCancel()">Annuler</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

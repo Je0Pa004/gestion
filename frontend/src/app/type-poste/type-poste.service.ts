@@ -1,0 +1,1 @@
+// Type-poste service placeholder

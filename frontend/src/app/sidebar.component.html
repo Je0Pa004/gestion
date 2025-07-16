@@ -1,0 +1,21 @@
+<nav class="custom-sidebar d-flex flex-column p-4">
+  <h2 class="sidebar-title mb-4">Splash</h2>
+  <ul class="nav flex-column mb-4">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="entitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Entités
+      </a>
+      <ul class="dropdown-menu show-on-hover" aria-labelledby="entitiesDropdown">
+        <li *ngFor="let entity of entities">
+          <a class="dropdown-item" [routerLink]="entity.route" routerLinkActive="active">{{ entity.name }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div class="main-content">
+  <ng-content></ng-content>
+</div>

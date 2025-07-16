@@ -1,0 +1,1 @@
+// Rubrique-paiement service placeholder
